@@ -28,7 +28,7 @@ public class DataBaseForReg extends SQLiteOpenHelper {
     //   public  static  final  String Col_9=
 
 //    public Object Context;
-
+/////
 
 
 
@@ -97,12 +97,12 @@ public class DataBaseForReg extends SQLiteOpenHelper {
         cursor.close();
         SDB.close();
 
-        if(count>0){
+        if(count > 0) {
             return true;
-
         }
-        else
-            return false;
+        else{
+        return  false;
+    }
 
     }
 
@@ -188,10 +188,8 @@ public class DataBaseForReg extends SQLiteOpenHelper {
             }while (cursor.moveToNext());
 
         }
-        else{
 
-        }
-        cursor.close();;
+        cursor.close();
         db.close();
         return returnList;
     }
