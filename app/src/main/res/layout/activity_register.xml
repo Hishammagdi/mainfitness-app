@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Register">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,8 +15,8 @@
 
         <ImageView
             android:id="@+id/img"
-            android:layout_width="200dp"
-            android:layout_height="220dp"
+            android:layout_width="90dp"
+            android:layout_height="91dp"
             android:layout_gravity="center"
             android:contentDescription="@android:string/cancel"
             android:src="@drawable/fit" />
@@ -32,7 +32,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/user"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -41,55 +41,64 @@
             android:drawableLeft="@drawable/ic_action_name"
             android:drawablePadding="10dp"
             android:hint="Username"
-            android:inputType="textEmailAddress"
+            android:inputType="text"
             android:padding="20dp"
             android:textColorHint="#2ba58c" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/Email"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:textColorHint="#2ba58c"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edit"
+            android:padding="20dp"
+            />
+        <EditText
+            android:id="@+id/_password"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:hint="Password"
             android:textColorHint="#2ba58c"
             android:layout_gravity="center"
-            android:drawableLeft="@drawable/ic_action_name"
+            android:drawableLeft="@drawable/ic_person"
             android:drawablePadding="10dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/edit"
             android:padding="20dp"
             />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="forget password?"
-            android:textColor="#2ba58c"
-            android:textStyle="bold"
-            android:layout_gravity="right"
-            android:layout_margin="20dp"
-            android:textSize="15dp"
-            android:layout_marginRight="35dp"
-            />
-        <Button
-            android:id="@+id/btu_login"
+        <EditText
+            android:id="@+id/ConfirmPassword"
             android:layout_width="300dp"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="ConfirmPassword"
+            android:textColorHint="#2ba58c"
             android:layout_gravity="center"
-            android:textColor="#fff"
-            android:text="Login"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/button"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edit"
+            android:padding="20dp"
             />
 
+
         <Button
-            android:id="@+id/btu_register"
-            android:layout_width="300dp"
+            android:id="@+id/btu_next"
+            android:layout_width="100dp"
             android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:textColor="#fff"
-            android:text="Register"
+            android:layout_gravity="right"
             android:layout_marginTop="10dp"
             android:background="@drawable/button"
-            />
+            android:text="Next"
+            android:textColor="#fff" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
