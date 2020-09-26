@@ -24,6 +24,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyAdapterHolder>  
     private  RecylerViewClickListener listener;
     public interface  OnItemClickListener{
         void OnItemClickListener(int position);
+        //sasaassasaassa
     }
 
     public MyAdapter(Context context, String NameTrining[], String time[], int images[],RecylerViewClickListener listener){
@@ -43,8 +44,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyAdapterHolder>  
         MyAdapterHolder myAdapterHolder = new MyAdapterHolder(view,getItemCount());
 
         mainActivity = new MainActivity();
-
-
         myAdapterHolder.animi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +57,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyAdapterHolder>  
     public void onBindViewHolder(@NonNull MyAdapterHolder holder, final int position) {
         //   MyAdapterHolder myAdapterHolder = new MyAdapterHolder(view ,position);
         WebView ani = null;
+
         holder.tx1.setText(NameTrining[position]);
         holder.tx2.setText(time[position]);
         holder.setitem(position);
@@ -85,6 +85,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyAdapterHolder>  
         ImageView image;
         WebView animi;
         int position11;
+
         public MyAdapterHolder(@NonNull View itemView,int posintion11) {
             super(itemView);
             tx1 = itemView.findViewById(R.id.textNameTrining);
@@ -97,11 +98,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyAdapterHolder>  
         public int getitem(){
             return position ;
         }
-
         public int setitem(int position1){
             return position1;
         }
-
         @Override
         public void onClick(View v) {
             listener.OnClick(itemView,getAdapterPosition());

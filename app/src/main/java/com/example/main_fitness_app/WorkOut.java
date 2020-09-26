@@ -12,12 +12,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
-
 public class WorkOut extends AppCompatActivity {
 
 
         String NameTringing[],description[];
-
 
         int images[]={};
         int imagesphoto[]={R.drawable.fitness1,R.drawable.fitness2,R.drawable.fitness3};
@@ -37,7 +35,7 @@ public class WorkOut extends AppCompatActivity {
         }
 
         private void setOnClickListener(){
-            listener = new MyAdapter.RecylerViewClickListener() {
+            listener = new MyAdapter.RecylerViewClickListener(){
                 @Override
                 public void OnClick(View view, int position) {
 
@@ -61,8 +59,6 @@ public class WorkOut extends AppCompatActivity {
             viewFlipper.setAutoStart(true);
             viewFlipper.setInAnimation(this,android.R.anim.slide_in_left);
             viewFlipper.setInAnimation(this,android.R.anim.slide_out_right);
-
-
         }
 
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -83,9 +79,6 @@ public class WorkOut extends AppCompatActivity {
             }
 
             setMyAdapter();
-
         }
-
-
 
 }

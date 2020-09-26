@@ -112,7 +112,7 @@ public class WorkOutFull extends AppCompatActivity {
         imageViewBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(WorkOutFull.this,MainActivity.class);
+                Intent intent1 = new Intent(WorkOutFull.this,WorkOut.class);
                 startActivity(intent1);
                 overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
 
