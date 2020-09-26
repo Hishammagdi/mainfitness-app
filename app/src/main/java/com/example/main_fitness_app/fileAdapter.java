@@ -1,4 +1,4 @@
-package com.example.main_fitness_app.Adapter;
+package com.example.main_fitness_app;
 
 
 import android.content.Context;
@@ -12,8 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-
-import com.example.main_fitness_app.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

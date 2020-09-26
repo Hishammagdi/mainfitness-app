@@ -6,11 +6,6 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.main_fitness_app.Adapter.MainAdapterPager;
-import com.example.main_fitness_app.meals_Fragments.Breakfast;
-import com.example.main_fitness_app.meals_Fragments.Dinner;
-import com.example.main_fitness_app.meals_Fragments.Lunch;
-import com.example.main_fitness_app.meals_Fragments.Snackes;
 import com.gigamole.navigationtabstrip.NavigationTabStrip;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;

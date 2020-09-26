@@ -1,4 +1,4 @@
-package com.example.main_fitness_app.meals_Fragments;
+package com.example.main_fitness_app;
 
 import android.content.res.AssetManager;
 import android.os.Bundle;
@@ -12,11 +12,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.main_fitness_app.Adapter.fileAdapter;
-import com.example.main_fitness_app.MainActivity;
-import com.example.main_fitness_app.R;
-import com.example.main_fitness_app.foodmain;
 
 import java.util.ArrayList;
 import java.util.HashMap;
