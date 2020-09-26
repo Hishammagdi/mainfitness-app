@@ -15,7 +15,7 @@ import android.widget.ViewFlipper;
 
 public class WorkOut extends AppCompatActivity {
 
-    public class MainActivity extends AppCompatActivity {
+
         String NameTringing[],description[];
 
 
@@ -87,5 +87,5 @@ public class WorkOut extends AppCompatActivity {
         }
 
 
-    }
+
 }

@@ -117,8 +117,6 @@ public class NextRegister extends AppCompatActivity {
 
 
                 if(male.isChecked()) {
-
-
                     if (PASSWORD.equals(CONFIRMPASSWORD)) {
                         long val = DR.insertData(USENAME, PASSWORD, CONFIRMPASSWORD, EMAIL, tage, weight, height, tmale);
                         if (val > 0) {
@@ -160,6 +158,17 @@ public class NextRegister extends AppCompatActivity {
 
 
 
+                }
+                else if(!female.isChecked()&&!male.isChecked()){
+
+
+
+                    Toast.makeText(getApplicationContext(),"Must select one of Gender",Toast.LENGTH_LONG).show();
+
+                }
+                else{
+
+                    Toast.makeText(getApplicationContext(),"Must select one of Gender",Toast.LENGTH_LONG).show();
                 }
 
 

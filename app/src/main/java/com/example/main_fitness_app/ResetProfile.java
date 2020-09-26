@@ -155,6 +155,13 @@ public class ResetProfile extends AppCompatActivity {
                         startActivity(Showpro);
                     }
                 }
+                else if(!gender.isChecked()&&!Genderf.isChecked()){
+
+
+
+                        Toast.makeText(getApplicationContext(),"Must select one of Gender",Toast.LENGTH_LONG).show();
+
+                }
                 else{
                     Toast.makeText(getApplicationContext(),"Update Error",Toast.LENGTH_LONG).show();
                 }

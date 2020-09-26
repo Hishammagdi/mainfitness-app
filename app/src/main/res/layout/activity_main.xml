@@ -33,12 +33,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
             android:text="keep health stay fit"
             android:textColor="#2ba58c"
             android:textSize="30dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.542"
+            app:layout_constraintHorizontal_bias="0.537"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img" />
 
