@@ -146,7 +146,6 @@ public class ResetProfile extends AppCompatActivity {
                     }
                 }
                 else  if(Genderf.isChecked()){
-
                     updatedataFemale=db.UpdateData(use,wweight,hheight,ttage,ttFamele);
                     if(updatedataFemale==true) {
                         Toast.makeText(getApplicationContext(), "Update Successfully", Toast.LENGTH_LONG).show();

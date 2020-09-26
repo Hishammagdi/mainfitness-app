@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    tools:context=".WorkOutFull">
+    tools:context=".WorkOutFull"
+    android:background="#2ba58c">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="418dp"
@@ -19,6 +20,7 @@
             android:id="@+id/cardView4"
             android:layout_width="364dp"
             android:layout_height="632dp"
+
             android:background="@drawable/fitnees4"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +35,8 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="#fff">
 
 
                     <ImageView

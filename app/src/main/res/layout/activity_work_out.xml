@@ -14,17 +14,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="16dp" >
+        tools:layout_editor_absoluteY="16dp"
+
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            >
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
                 android:layout_width="369dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/redius"
+                android:background="#fff"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
@@ -43,7 +46,7 @@
                     android:layout_width="392dp"
                     android:layout_height="844dp"
                     android:layout_marginTop="228dp"
-                    android:background="#fefdf8">
+                    android:background="#fff">
 
                 </androidx.recyclerview.widget.RecyclerView>
 
