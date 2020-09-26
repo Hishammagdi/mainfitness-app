@@ -53,7 +53,7 @@ TextView caltv ;
         String cal = String.valueOf(calories.get(food_name));
         String serv = serving.get(position);
 
-        foodmain.totalcal.setText("Your total calories are "+ totalcal);
+        foodmain.totalcal.setText("Your total calories are "+ (int)totalcal);
         holder.food_nametv.setText(food_name);
         holder.caltv.setText(cal + " calories");
         holder.servtv.setText(serv);
@@ -120,12 +120,24 @@ TextView caltv ;
             }
 
         }
+        for(int i=0 ; i< checkeditems.size();i++){
+            if(position == checkeditems.get(i)){
+                checkeditems.remove(i);
+                finishmeal.foodname.remove(i);
+                finishmeal.calories.remove(i);
+                finishmeal.serving.remove(i);
+                break;
+            }
+        }
 
     }
 private int  action( ViewHolder holder , int calorie , int total ){
 
     if (calorie + calories.get(holder.food_nametv.getText()) <= total) {
             checkeditems.add(holder.getAdapterPosition());
+            finishmeal.foodname.add((String) holder.food_nametv.getText());
+            finishmeal.calories.put((String) holder.food_nametv.getText(),calories.get(holder.food_nametv.getText()));
+            finishmeal.serving.add((String) holder.servtv.getText());
             holder.cardView.setBackgroundColor(Color.parseColor("#084539"));
             calorie += calories.get(holder.food_nametv.getText());
 

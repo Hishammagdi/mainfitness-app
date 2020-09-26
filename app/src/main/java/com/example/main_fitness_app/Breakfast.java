@@ -39,6 +39,7 @@ public class Breakfast extends Fragment {
 
         return view;
     }
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,8 +47,6 @@ public class Breakfast extends Fragment {
         foodmain.showdata(1,fileeassetManager,foodname,calories,serving );
 
     }
-
-
 
 
     public TextView getTotal() {

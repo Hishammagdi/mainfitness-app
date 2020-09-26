@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".stepcounter"/>
+        <activity android:name=".finishmeal"/>
         <activity android:name=".WorkOut" />
         <activity android:name=".WorkOutFull" />
         <activity android:name=".ResetProfile" />

@@ -1,7 +1,10 @@
 package com.example.main_fitness_app;
 
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,13 +32,21 @@ public class foodmain extends AppCompatActivity {
     ViewPager mViewPager;
 static public TextView c ;
 static public TextView totalcal ;
-
+Button finishbtn ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.foodmainlayout);
         c= findViewById(R.id.c);
+        finishbtn = findViewById(R.id.finish);
         totalcal = findViewById(R.id.totalcal);
+        finishbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ShowActivity= new Intent(foodmain.this,finishmeal.class);
+                startActivity(ShowActivity);
+            }
+        });
         init();
         setUp();
     }
