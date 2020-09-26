@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.main_fitness_app">
-    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
     <application
         android:allowBackup="true"
@@ -10,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResetProfile"></activity>
+        <activity android:name=".WorkOut"></activity>
+        <activity android:name=".WorkOutFull" />
+        <activity android:name=".ResetProfile" />
         <activity android:name=".ShowProfile" />
         <activity android:name=".BodyCheck" />
         <activity android:name=".NextRegister" />
@@ -22,7 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

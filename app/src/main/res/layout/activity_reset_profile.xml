@@ -7,384 +7,245 @@
     tools:context=".ResetProfile">
 
 
-    <TextView
-        android:id="@+id/yearsText"
-        android:layout_width="80dp"
-        android:layout_height="42dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Years"
-        android:textColor="#2ba58c"
-        android:textSize="25dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="391dp"
+        android:layout_height="678dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.912"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269" />
-
-    <TextView
-        android:id="@+id/textage1"
-        android:layout_width="117dp"
-        android:layout_height="38dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.581"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.268" />
-
-    <TextView
-        android:id="@+id/H_textview"
-        android:layout_width="57dp"
-        android:layout_height="55dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="cm"
-        android:textColor="#2ba58c"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.858"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.784" />
-
-    <TextView
-        android:layout_width="211dp"
-        android:layout_height="31dp"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:layout_marginTop="16dp"
-        android:text="•What is your gender?"
-        android:textColor="#2ba58c"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/W_Textview"
-        android:layout_width="57dp"
-        android:layout_height="55dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="kg"
-        android:textColor="#2ba58c"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.858"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.525" />
-
-    <RadioButton
-        android:id="@+id/radio_male"
-        android:layout_width="121dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="64dp"
-        android:text="Male"
-        android:textColor="#2ba58c"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioButton
-        android:id="@+id/radio_female"
-        android:layout_width="128dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="60dp"
-        android:text="Female"
-        android:textColor="#2ba58c"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.717"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="600dp"
-        android:text="•What is your age?"
-        android:textColor="#2ba58c"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="244dp"
-        android:text="•What is your Height?"
-        android:textColor="#2ba58c"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.158"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
 
-    <NumberPicker
-        android:id="@+id/Picker_Height"
-        android:layout_width="70dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="124dp"
-        android:solidColor="#2ba58c"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.217"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/yearsText"
+            android:layout_width="80dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Years"
+            android:textColor="#2ba58c"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/W_Textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_female"
+            app:layout_constraintVertical_bias="0.427" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <TextView
+            android:id="@+id/textage1"
+            android:layout_width="117dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/yearsText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.351" />
 
-        android:layout_marginBottom="424dp"
-        android:text="•What is your Weight?"
-        android:textColor="#2ba58c"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.161"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/H_textview"
+            android:layout_width="57dp"
+            android:layout_height="55dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginBottom="4dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="cm"
+            android:textColor="#2ba58c"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/update"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-
-    <NumberPicker
-        android:id="@+id/Picker_Weight"
-        android:layout_width="70dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="300dp"
-        android:solidColor="#2ba58c"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.246"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/W_P1"
-        android:layout_width="117dp"
-        android:layout_height="38dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.581"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.512" />
-
-    <TextView
-        android:id="@+id/H_P1"
-        android:layout_width="117dp"
-        android:layout_height="38dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.779" />
-
-    <Button
-        android:id="@+id/btu_register"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_gravity="left"
-        android:layout_marginBottom="28dp"
-        android:background="@drawable/button"
-        android:text="Next"
-        android:textColor="#fff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.906"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <NumberPicker
-        android:id="@+id/picker_age"
-        android:layout_width="70dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="484dp"
-        android:solidColor="#2ba58c"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/yearsText"
-        app:layout_constraintHorizontal_bias="0.237"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/W_Textview"
+            android:layout_width="57dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="kg"
+            android:textColor="#2ba58c"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.917"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.599" />
 
 
+        <RadioButton
+            android:id="@+id/radio_male"
+            android:layout_width="121dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="20dp"
+            android:text="Male"
+            android:textColor="#2ba58c"
+            app:layout_constraintEnd_toStartOf="@+id/radio_female"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/yearsText2"
-        android:layout_width="80dp"
-        android:layout_height="42dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Years"
-        android:textColor="#2ba58c"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.912"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269" />
+        <RadioButton
+            android:id="@+id/radio_female"
+            android:layout_width="128dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="16dp"
+            android:text="Female"
+            android:textColor="#2ba58c"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.79"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/textage2"
-        android:layout_width="117dp"
-        android:layout_height="38dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.581"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.268" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
 
-    <TextView
-        android:id="@+id/h_textview"
-        android:layout_width="57dp"
-        android:layout_height="55dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="cm"
-        android:textColor="#2ba58c"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.858"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.784" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="•What is your age?"
+            android:textColor="#2ba58c"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.141"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_male" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="211dp"
-        android:layout_height="31dp"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:layout_marginTop="16dp"
-        android:text="•What is your gender?"
-        android:textColor="#2ba58c"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
 
-    <TextView
-        android:id="@+id/w_Textview"
-        android:layout_width="57dp"
-        android:layout_height="55dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="kg"
-        android:textColor="#2ba58c"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.858"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.525" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="•What is your Height?"
+            android:textColor="#2ba58c"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.158"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Picker_Weight" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
 
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="600dp"
-        android:text="•What is your age?"
-        android:textColor="#2ba58c"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
-        app:layout_constraintStart_toStartOf="parent" />
+        <NumberPicker
+            android:id="@+id/Picker_Height"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="36dp"
+            android:layout_marginRight="36dp"
+            android:solidColor="#2ba58c"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/H_P1"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
 
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="244dp"
-        android:text="•What is your Height?"
-        android:textColor="#2ba58c"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.158"
-        app:layout_constraintStart_toStartOf="parent" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="•What is your Weight?"
+            android:textColor="#2ba58c"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.188"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/picker_age" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
+        <NumberPicker
+            android:id="@+id/Picker_Weight"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:solidColor="#2ba58c"
+            app:layout_constraintEnd_toStartOf="@+id/W_P1"
+            app:layout_constraintHorizontal_bias="0.438"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="424dp"
-        android:text="•What is your Weight?"
-        android:textColor="#2ba58c"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.161"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/W_P1"
+            android:layout_width="126dp"
+            android:layout_height="43dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            android:textSize="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/H_P1"
+            app:layout_constraintEnd_toStartOf="@+id/W_Textview"
+            app:layout_constraintHorizontal_bias="0.847"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textage1"
+            app:layout_constraintVertical_bias="0.533" />
 
-    <TextView
-        android:id="@+id/h_P"
-        android:layout_width="117dp"
-        android:layout_height="38dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.779" />
+        <TextView
+            android:id="@+id/H_P1"
+            android:layout_width="135dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/H_textview"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintVertical_bias="0.148" />
 
-    <Button
-        android:id="@+id/update"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_gravity="left"
-        android:layout_marginBottom="28dp"
-        android:background="@drawable/button"
-        android:text="Update"
-        android:textColor="#fff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.906"
-        app:layout_constraintStart_toStartOf="parent" />
+        <NumberPicker
+            android:id="@+id/picker_age"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:solidColor="#2ba58c"
+            app:layout_constraintEnd_toStartOf="@+id/textage1"
+            app:layout_constraintHorizontal_bias="0.586"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="215dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:text="•What is your gender?"
+            android:textColor="#2ba58c"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.221"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.058" />
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button"
+            android:text="Update"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.903"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,130 +7,138 @@
     tools:context=".ShowProfile">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="421dp"
-        android:layout_height="201dp"
-        android:layout_marginBottom="468dp"
-        android:background="#2ba58c"
+        android:layout_width="370dp"
+        android:layout_height="640dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="84dp"
-            android:layout_height="70dp"
-            android:src="@drawable/backk"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="362dp"
+            android:layout_height="190dp"
+            android:background="#2ba58c"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.01"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="86dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/backk"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.057"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="209dp"
+                android:layout_height="135dp"
+                android:src="@drawable/userc"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.783"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.761" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/resetprofile"
+            android:layout_width="232dp"
+            android:layout_height="61dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button"
+            android:text="Reset My Profile"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.456"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/se"
+            app:layout_constraintVertical_bias="0.241" />
+
+        <TextView
+            android:id="@+id/x"
+            android:layout_width="234dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="20dp"
+            android:text="Profile"
+            android:textColor="#2ba58c"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <TextView
+            android:id="@+id/t"
+            android:layout_width="262dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="12dp"
+            android:text="Profile"
+            android:textColor="#2ba58c"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.629"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/x" />
+
+        <TextView
+            android:id="@+id/v"
+            android:layout_width="234dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="8dp"
+            android:text="Profile"
+            android:textColor="#2ba58c"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t" />
+
+        <TextView
+            android:id="@+id/te"
+            android:layout_width="234dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="7dp"
+            android:text="Profile"
+            android:textColor="#2ba58c"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/e" />
+
+        <TextView
+            android:id="@+id/e"
+            android:layout_width="234dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="9dp"
+            android:text="Profile"
+            android:textColor="#2ba58c"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v" />
+
+        <TextView
+            android:id="@+id/se"
+            android:layout_width="234dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="12dp"
+            android:text="Profile"
+            android:textColor="#2ba58c"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/te" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/t"
-        android:layout_width="287dp"
-        android:layout_height="62dp"
-        android:layout_marginBottom="332dp"
-        android:text="Profile"
-        android:textColor="#2ba58c"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.725"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/e"
-        android:layout_width="254dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="280dp"
-        android:text="Profile"
-        android:textColor="#2ba58c"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.585"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/x"
-        android:layout_width="227dp"
-        android:layout_height="53dp"
-        android:layout_marginBottom="396dp"
-        android:text="Profile"
-        android:textColor="#2ba58c"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/te"
-        android:layout_width="228dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="156dp"
-        android:text="Profile"
-        android:textColor="#2ba58c"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/v"
-        android:layout_width="228dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="216dp"
-        android:text="Profile"
-        android:textColor="#2ba58c"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-    <TextView
-        android:id="@+id/se"
-        android:layout_width="234dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="92dp"
-        android:text="Profile"
-        android:textColor="#2ba58c"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="223dp"
-        android:layout_height="164dp"
-        android:layout_marginBottom="460dp"
-        android:src="@drawable/userc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.416"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/resetprofile"
-        android:layout_width="245dp"
-        android:layout_height="56dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/button"
-        android:text="Reset My Profile"
-        android:textColor="#fff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

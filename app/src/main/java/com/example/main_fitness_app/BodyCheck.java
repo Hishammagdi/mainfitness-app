@@ -44,7 +44,7 @@ public class BodyCheck extends AppCompatActivity {
         use=bundle.getString("UserName");
         System.out.println(use);
         list=db.GetAll(use);
-        notificationImage=(ImageView)findViewById(R.id.notification);
+        //notificationImage=(ImageView)findViewById(R.id.notification);
         bmi=(Button)findViewById(R.id.Bmi);
         profile=(Button)findViewById(R.id.profile);
 
@@ -57,13 +57,7 @@ public class BodyCheck extends AppCompatActivity {
 
 
 
-        notificationImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-
-            }
-        });
 
         System.out.println(height);
         System.out.println(showProfile.tAge);
@@ -98,12 +92,16 @@ public class BodyCheck extends AppCompatActivity {
         });
 
         WorkOut=(Button)findViewById(R.id.WorkOut);
+
         WorkOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(),WorkOut.class);
 
+                    startActivity(intent);
             }
         });
+
         FootStep=(Button)findViewById(R.id.FootStep);
         FootStep.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -66,12 +66,10 @@ public class ShowProfile extends AppCompatActivity {
 
 
         //  userdata = (ListView) findViewById(R.id.list);
-        firebaseAuth=FirebaseAuth.getInstance();
-        user= firebaseAuth.getCurrentUser();
+
         db = new DataBaseForReg(getApplicationContext());
         image=(ImageView)findViewById(R.id.imageView3);
-        firebaseStorage =FirebaseStorage.getInstance();
-        storageReference=firebaseStorage.getReference();
+
         back=(ImageView)findViewById(R.id.imageView);
 
         back.setOnClickListener(new View.OnClickListener() {
