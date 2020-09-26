@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".stepcounter"></activity>
+        <activity android:name=".stepcounter"/>
         <activity android:name=".WorkOut" />
         <activity android:name=".WorkOutFull" />
         <activity android:name=".ResetProfile" />
@@ -19,6 +19,7 @@
         <activity android:name=".BodyCheck" />
         <activity android:name=".NextRegister" />
         <activity android:name=".Register" />
+        <activity android:name=".foodmain" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

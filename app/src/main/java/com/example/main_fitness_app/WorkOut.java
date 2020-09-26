@@ -41,7 +41,7 @@ public class WorkOut extends AppCompatActivity {
                 @Override
                 public void OnClick(View view, int position) {
 
-                    Intent intent = new Intent(getApplicationContext(),WorkOutFull.class);
+                    Intent intent = new Intent(WorkOut.this,WorkOutFull.class);
 
                     intent.putExtra("position",position);
 
@@ -64,8 +64,8 @@ public class WorkOut extends AppCompatActivity {
 
 
         }
-        @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 
+        @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
