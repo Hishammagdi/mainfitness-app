@@ -70,13 +70,14 @@ public class BodyCheck extends AppCompatActivity {
 
         double calories=  inbodyCheck.Calc_Calories(Gender,Weight,Height,age);
         calcalo.setText("Your Daily calories: "+calories);
-calcalo.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
+        fileAdapter.totalcal= calories ;
+        calcalo.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
         Intent intent = new Intent(BodyCheck.this,foodmain.class);
         startActivity(intent);
-    }
-});
+        }
+        });
         double BMI= inbodyCheck.BMI_Calc(Weight,Height);
         bmi.setText("BMI: "+BMI);
 

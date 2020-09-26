@@ -7,11 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,8 +23,10 @@ public class fileAdapter extends RecyclerView.Adapter<fileAdapter.ViewHolder> {
     private LayoutInflater inflater;
     private ArrayList<Integer> checkeditems = new ArrayList<>();
     private Context context ;
-    private int bfcaloriesnumber=0 ,dicaloriesnumber=0 ,sncaloriesnumber=0 ,lucaloriesnumber=0 , category , totalamountofcal ;
-
+    private int bfcaloriesnumber=0 ,dicaloriesnumber=0 ,sncaloriesnumber=0 ,lucaloriesnumber=0 , category  ;
+    public static double totalcal ;
+    private int brtotal , ditotal ,sntotal , lutotal ;
+TextView caltv ;
     public fileAdapter(Context context, List<String> foodname, HashMap<String, Integer> calories, List<String> serving ,int category){
         this.foodname = foodname;
         this.calories = calories;
@@ -38,7 +40,8 @@ public class fileAdapter extends RecyclerView.Adapter<fileAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         final View view = inflater.inflate(R.layout.customfoodlayout,parent,false);
-
+        generatecalories();
+        caltv = view.findViewById(R.id.c);
         return new ViewHolder(view);
     }
 
@@ -49,13 +52,11 @@ public class fileAdapter extends RecyclerView.Adapter<fileAdapter.ViewHolder> {
         String cal = String.valueOf(calories.get(food_name));
         String serv = serving.get(position);
 
+        foodmain.totalcal.setText("Your total calories are "+ totalcal);
         holder.food_nametv.setText(food_name);
         holder.caltv.setText(cal + " calories");
         holder.servtv.setText(serv);
-
-        for(int i=0 ; i< checkeditems.size() ; i++){
-            System.out.println("selected items" + checkeditems.get(i));
-        }
+        System.out.println("checked items is --->" +checkeditems);
 
         for(int i=0 ; i< checkeditems.size(); i++) {
             if (position != checkeditems.get(i)) {
@@ -69,45 +70,61 @@ public class fileAdapter extends RecyclerView.Adapter<fileAdapter.ViewHolder> {
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!holder.cardView.getCardBackgroundColor().equals(Color.parseColor("#2bA58C"))) {
+                if(checkeditems.contains(position)){
+                    System.out.println("yu deleted" + holder.food_nametv.getText());
+                    remove(position);
+                    holder.cardView.setBackgroundColor(Color.parseColor("#2bA58C"));
+                }
+               else if (!holder.cardView.getCardBackgroundColor().equals(Color.parseColor("#2bA58C"))) {
                     switch (category) {
-                        case 1:
-                            bfcaloriesnumber=  action(holder, bfcaloriesnumber );
-                           // TextView total = view.findViewById(R.id.totalcal);
-                             //total.setText(String.valueOf(bfcaloriesnumber));
+                        case 0 :
+                            sncaloriesnumber = action(holder, sncaloriesnumber, sntotal);
+                            foodmain.c.setText("you selected " +sncaloriesnumber +" out from " + sntotal );
+                            break ;
+                        case 1 :
+                            bfcaloriesnumber=  action(holder, bfcaloriesnumber,brtotal );
+                            foodmain.c.setText("you selected " +bfcaloriesnumber +" out from " + brtotal );
+
                             break;
-                        case 2:
-                            dicaloriesnumber= action(holder, dicaloriesnumber );
+                        case 2 :
+                            dicaloriesnumber= action(holder, dicaloriesnumber ,ditotal);
+                            foodmain.c.setText("you selected " +dicaloriesnumber +" out from " + ditotal );
+
                             break;
                         case 3:
-                            lucaloriesnumber= action(holder, lucaloriesnumber );
+                            lucaloriesnumber= action(holder, lucaloriesnumber,lutotal );
+                            foodmain.c.setText("you selected " +lucaloriesnumber +" out from " + lutotal );
+
                             break;
-                        case 0:
-                            sncaloriesnumber = action(holder, sncaloriesnumber );
-                           break;
                     }
 
 
                 }
-
             }
 
         });
 
     }
-private int  action( ViewHolder holder , int calorie ){
+    private void remove(int position){
+        for(int i=0 ; i< checkeditems.size();i++){
+            if(position == checkeditems.get(i)){
+                checkeditems.remove(i);
+                break;
+            }
 
-    if (calorie + calories.get(holder.food_nametv.getText()) <= 200) {
-        System.out.println("holder posithion --->" + holder.getAdapterPosition());
+        }
+
+    }
+private int  action( ViewHolder holder , int calorie , int total ){
+
+    if (calorie + calories.get(holder.food_nametv.getText()) <= total) {
             checkeditems.add(holder.getAdapterPosition());
             holder.cardView.setBackgroundColor(Color.parseColor("#084539"));
-            System.out.println("you choosed from bf---> " + holder.food_nametv.getText() + " with  ---> " + holder.caltv.getText() );
             calorie += calories.get(holder.food_nametv.getText());
 
     } else {
-        System.out.println("sorry max numberof cal");
+        Toast.makeText(context.getApplicationContext(), "Sorry you achieved your calories limit", Toast.LENGTH_LONG).show();
     }
-    System.out.println("total become" + calorie);
     return calorie ;
 
 
@@ -128,20 +145,12 @@ private int  action( ViewHolder holder , int calorie ){
             cardView = itemView.findViewById(R.id.cardview);
         }
     }
+private void generatecalories(){
+        ditotal = (int)(totalcal/8);
+        sntotal = (int)(totalcal/8);
+        lutotal= (int)(totalcal/2);
+        brtotal=(int)(totalcal/4);
 
-    public int getBfcaloriesnumber() {
-        return bfcaloriesnumber;
-    }
+}
 
-    public int getDicaloriesnumber() {
-        return dicaloriesnumber;
-    }
-
-    public int getSncaloriesnumber() {
-        return sncaloriesnumber;
-    }
-
-    public int getLucaloriesnumber() {
-        return lucaloriesnumber;
-    }
 }

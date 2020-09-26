@@ -2,6 +2,7 @@ package com.example.main_fitness_app;
 
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -26,12 +27,15 @@ public class foodmain extends AppCompatActivity {
     NavigationTabStrip mNavigationTabStrip;
     MainAdapterPager adapterPager;
     ViewPager mViewPager;
-
+static public TextView c ;
+static public TextView totalcal ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.foodmainlayout);
+        c= findViewById(R.id.c);
+        totalcal = findViewById(R.id.totalcal);
         init();
         setUp();
     }
