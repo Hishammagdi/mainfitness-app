@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Fitness Application</string>
     <string-array name="TrainingName">
         <item>Push up</item>
         <item>Reverse</item>

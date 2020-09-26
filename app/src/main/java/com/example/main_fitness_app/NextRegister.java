@@ -117,6 +117,7 @@ public class NextRegister extends AppCompatActivity {
 
 
                 if(male.isChecked()) {
+                  //  female.getText().equals(false);
                     if (PASSWORD.equals(CONFIRMPASSWORD)) {
                         long val = DR.insertData(USENAME, PASSWORD, CONFIRMPASSWORD, EMAIL, tage, weight, height, tmale);
                         if (val > 0) {
@@ -137,7 +138,7 @@ public class NextRegister extends AppCompatActivity {
 
 
                 else if(female.isChecked()){
-
+                 //   male.getText().equals(false);
                     if(PASSWORD.equals(CONFIRMPASSWORD)){
                         long val=  DR.insertData(USENAME,PASSWORD,CONFIRMPASSWORD,EMAIL,tage,weight,height,tFamele);
                         if(val>0){
