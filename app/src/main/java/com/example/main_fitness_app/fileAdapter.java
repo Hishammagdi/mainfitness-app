@@ -41,6 +41,7 @@ TextView caltv ;
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         final View view = inflater.inflate(R.layout.customfoodlayout,parent,false);
         generatecalories();
+        settext();
         caltv = view.findViewById(R.id.c);
         return new ViewHolder(view);
     }
@@ -71,7 +72,21 @@ TextView caltv ;
             @Override
             public void onClick(View view) {
                 if(checkeditems.contains(position)){
-                    System.out.println("yu deleted" + holder.food_nametv.getText());
+                    switch (category) {
+                        case 0 :
+                            sncaloriesnumber -= calories.get(holder.food_nametv.getText());
+                            break ;
+                        case 1 :
+                            bfcaloriesnumber -= calories.get(holder.food_nametv.getText());
+                            break;
+                        case 2 :
+                            dicaloriesnumber -=calories.get(holder.food_nametv.getText());
+                            break;
+                        case 3:
+                            lucaloriesnumber -= calories.get(holder.food_nametv.getText()) ;
+                            break;
+                    }
+                    settext();
                     remove(position);
                     holder.cardView.setBackgroundColor(Color.parseColor("#2bA58C"));
                 }
@@ -79,26 +94,18 @@ TextView caltv ;
                     switch (category) {
                         case 0 :
                             sncaloriesnumber = action(holder, sncaloriesnumber, sntotal);
-                            foodmain.c.setText("you selected " +sncaloriesnumber +" out from " + sntotal );
                             break ;
                         case 1 :
                             bfcaloriesnumber=  action(holder, bfcaloriesnumber,brtotal );
-                            foodmain.c.setText("you selected " +bfcaloriesnumber +" out from " + brtotal );
-
                             break;
                         case 2 :
                             dicaloriesnumber= action(holder, dicaloriesnumber ,ditotal);
-                            foodmain.c.setText("you selected " +dicaloriesnumber +" out from " + ditotal );
-
                             break;
                         case 3:
                             lucaloriesnumber= action(holder, lucaloriesnumber,lutotal );
-                            foodmain.c.setText("you selected " +lucaloriesnumber +" out from " + lutotal );
-
                             break;
                     }
-
-
+                    settext();
                 }
             }
 
@@ -143,6 +150,23 @@ private int  action( ViewHolder holder , int calorie , int total ){
             caltv = itemView.findViewById(R.id.calories);
             servtv = itemView.findViewById(R.id.serving);
             cardView = itemView.findViewById(R.id.cardview);
+        }
+    }
+    private void settext(){
+        switch(category){
+            case 0 :
+                foodmain.c.setText("you selected " +sncaloriesnumber +" out from " + sntotal );
+                break;
+            case 1:
+                foodmain.c.setText("you selected " +bfcaloriesnumber +" out from " + brtotal );
+                break;
+            case 2:
+                foodmain.c.setText("you selected " +dicaloriesnumber +" out from " + ditotal );
+                break;
+            case 3 :
+                foodmain.c.setText("you selected " +lucaloriesnumber +" out from " + lutotal );
+
+                break;
         }
     }
 private void generatecalories(){

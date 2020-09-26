@@ -43,19 +43,4 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
-    <TextView
-        android:id="@+id/totalcal"
-        android:layout_width="191dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="89dp"
-        app:layout_constraintBottom_toTopOf="@+id/breakfastrv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="18dp"
-        android:layout_marginRight="27dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
