@@ -10,8 +10,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import static java.security.AccessController.getContext;
-
 public class finishmeal extends AppCompatActivity {
     private RecyclerView recyclerView ;
     static HashMap<String, Integer> calories = new HashMap<String, Integer>();
@@ -23,7 +21,7 @@ public class finishmeal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.foodfinish);
         recyclerView = findViewById(R.id.finishrc);
-        fileAdapter adapter = new fileAdapter(finishmeal.this,foodname,calories,serving,1);
+        fileAdapter adapter = new fileAdapter(finishmeal.this,foodname,calories,serving,4);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 

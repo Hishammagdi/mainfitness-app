@@ -18,15 +18,15 @@ import java.util.HashMap;
 import java.util.List;
 
 public class fileAdapter extends RecyclerView.Adapter<fileAdapter.ViewHolder> {
-    private List<String> foodname,serving;
-    private HashMap<String, Integer> calories;
+    private List<String> foodname ,serving ;
+    private HashMap<String, Integer> calories ;
     private LayoutInflater inflater;
     private ArrayList<Integer> checkeditems = new ArrayList<>();
     private Context context ;
     private int bfcaloriesnumber=0 ,dicaloriesnumber=0 ,sncaloriesnumber=0 ,lucaloriesnumber=0 , category  ;
     public static double totalcal ;
     private int brtotal , ditotal ,sntotal , lutotal ;
-TextView caltv ;
+    private TextView caltv ;
     public fileAdapter(Context context, List<String> foodname, HashMap<String, Integer> calories, List<String> serving ,int category){
         this.foodname = foodname;
         this.calories = calories;
@@ -104,6 +104,9 @@ TextView caltv ;
                         case 3:
                             lucaloriesnumber= action(holder, lucaloriesnumber,lutotal );
                             break;
+
+
+
                     }
                     settext();
                 }
@@ -115,21 +118,15 @@ TextView caltv ;
     private void remove(int position){
         for(int i=0 ; i< checkeditems.size();i++){
             if(position == checkeditems.get(i)){
+                System.out.println("you deleted "+ foodname.get(position) + " number " + position );
+                finishmeal.foodname.remove(foodname.get(position));
+                finishmeal.calories.remove(calories.get(position));
+                finishmeal.serving.remove(serving.get(position));
                 checkeditems.remove(i);
                 break;
             }
 
         }
-        for(int i=0 ; i< checkeditems.size();i++){
-            if(position == checkeditems.get(i)){
-                checkeditems.remove(i);
-                finishmeal.foodname.remove(i);
-                finishmeal.calories.remove(i);
-                finishmeal.serving.remove(i);
-                break;
-            }
-        }
-
     }
 private int  action( ViewHolder holder , int calorie , int total ){
 
